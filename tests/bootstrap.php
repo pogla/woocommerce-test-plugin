@@ -46,6 +46,10 @@ class WC_Test_Plugin_Tests_Bootstrap {
 		require_once $this->wp_tests_dir . '/includes/functions.php';
 		// load WC
 		tests_add_filter( 'muplugins_loaded', array( $this, 'load_wc' ) );
+
+		// load WC
+		tests_add_filter( 'muplugins_loaded', array( $this, 'load_plugin' ) );
+
 		// install WC
 		tests_add_filter( 'setup_theme', array( $this, 'install_wc' ) );
 		// load the WP testing environment
@@ -63,6 +67,10 @@ class WC_Test_Plugin_Tests_Bootstrap {
 		define( 'WC_TAX_ROUNDING_MODE', 'auto' );
 		define( 'WC_USE_TRANSACTIONS', false );
 		require_once $this->wc_dir . '/woocommerce.php';
+	}
+
+	public function load_plugin() {
+		require_once $this->plugin_dir . '/woocommerce-test-plugin.php';
 	}
 
 	/**
