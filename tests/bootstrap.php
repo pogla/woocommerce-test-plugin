@@ -84,14 +84,14 @@ class WC_Test_Plugin_Tests_Bootstrap {
 	 * Loads the required files.
 	 */
 	private function includes() {
-		require_once( $this->wcTestsDir . 'tests/framework/class-wc-mock-session-handler.php' );
-		require_once( $this->wcTestsDir . 'tests/framework/class-wc-unit-test-case.php' );
-		require_once( $this->wcTestsDir . 'tests/framework/helpers/class-wc-helper-product.php'  );
-		require_once( $this->wcTestsDir . 'tests/framework/helpers/class-wc-helper-coupon.php'  );
-		require_once( $this->wcTestsDir . 'tests/framework/helpers/class-wc-helper-fee.php'  );
-		require_once( $this->wcTestsDir . 'tests/framework/helpers/class-wc-helper-shipping.php'  );
-		require_once( $this->wcTestsDir . 'tests/framework/helpers/class-wc-helper-customer.php'  );
-		require_once( $this->wcTestsDir . 'tests/framework/helpers/class-wc-helper-order.php'  );
+		require_once( $this->wcTestsDir . '/tests/framework/class-wc-mock-session-handler.php' );
+		require_once( $this->wcTestsDir . '/tests/framework/class-wc-unit-test-case.php' );
+		require_once( $this->wcTestsDir . '/tests/framework/helpers/class-wc-helper-product.php'  );
+		require_once( $this->wcTestsDir . '/tests/framework/helpers/class-wc-helper-coupon.php'  );
+		require_once( $this->wcTestsDir . '/tests/framework/helpers/class-wc-helper-fee.php'  );
+		require_once( $this->wcTestsDir . '/tests/framework/helpers/class-wc-helper-shipping.php'  );
+		require_once( $this->wcTestsDir . '/tests/framework/helpers/class-wc-helper-customer.php'  );
+		require_once( $this->wcTestsDir . '/tests/framework/helpers/class-wc-helper-order.php'  );
 	}
 }
 
