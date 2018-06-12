@@ -17,7 +17,9 @@ class WC_Test_Plugin_Tests_Bootstrap {
 	public $tests_dir;
 	/** @var string plugin directory */
 	public $plugin_dir;
+	/** @var string WooCommerce directory */
 	public $wc_dir;
+	/** @var string WooCommerce tests directory */
 	public $wc_tests_dir;
 
 	/**
@@ -97,6 +99,8 @@ class WC_Test_Plugin_Tests_Bootstrap {
 	/**
 	 * Load WC-specific test cases and factories.
 	 *
+	 *
+	 *
 	 * @since 2.2
 	 */
 	public function includes() {
@@ -105,7 +109,11 @@ class WC_Test_Plugin_Tests_Bootstrap {
 		require_once $this->wc_tests_dir . '/framework/class-wc-mock-session-handler.php';
 		require_once $this->wc_tests_dir . '/framework/class-wc-mock-wc-data.php';
 		require_once $this->wc_tests_dir . '/framework/class-wc-mock-wc-object-query.php';
-		require_once $this->wc_tests_dir . '/framework/class-wc-mock-payment-gateway.php';
+
+		if( file_exists( $this->wc_tests_dir . '/framework/class-wc-mock-payment-gateway.php' ) ) {
+			require_once $this->wc_tests_dir . '/framework/class-wc-mock-payment-gateway.php';
+		}
+
 		require_once $this->wc_tests_dir . '/framework/class-wc-payment-token-stub.php';
 		require_once $this->wc_tests_dir . '/framework/vendor/class-wp-test-spy-rest-server.php';
 		// test cases
