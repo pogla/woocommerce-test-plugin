@@ -132,8 +132,12 @@ install_wc() {
 
     cd $WP_TESTS_DIR
     cd ..
+    echo $PWD
+    echo "$(ls)"
     git clone https://github.com/woocommerce/woocommerce.git
     cd woocommerce
+    echo $PWD
+    echo "$(ls)"
     git checkout $WC_VERSION
     cd -
 }
