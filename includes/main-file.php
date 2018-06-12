@@ -1,6 +1,5 @@
 <?php
 
-
 class WooCommerce_TestPlugin {
 
 	private static $instance;
