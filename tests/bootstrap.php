@@ -70,7 +70,7 @@ class WC_Test_Plugin_Tests_Bootstrap {
 	 * @return void
 	 */
 	public function loadPlugin() {
-		include_once $this->pluginDir . '/woocommerce-cart-url.php';
+		include_once $this->pluginDir . '/woocommerce-test-plugin.php';
 	}
 
 	/**
