@@ -41,7 +41,7 @@ class WC_Test_Plugin_Tests_Bootstrap {
 		$this->tests_dir    = dirname( __FILE__ );
 		$this->plugin_dir   = dirname( $this->tests_dir );
 		$this->wp_tests_dir = '/tmp/wordpress-tests-lib';
-		$this->wc_dir = '/tmp/woocommerce';
+		$this->wc_dir       = '/tmp/woocommerce';
 		$this->wc_tests_dir = $this->wc_dir . '/tests';
 
 		// load test function so tests_add_filter() is available
